@@ -1,0 +1,376 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "jost", verdana, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: #ffeddf;
+    
+}
+/* ================================================ Navigation Bar ===================================================*/
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 5%;
+}
+
+.logo img {
+    height: 30px;
+    max-width: 100%;
+}
+
+.navmenu{
+    display: flex;
+}
+
+.navmenu a {
+    color: black;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-weight: inherit;
+    transition: all .42s ease ;
+}
+
+.navmenu a:hover{
+    color: orangered;
+}
+
+.nav-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.search-input{
+    width: 200px;
+    height:40px;
+    padding-left: 20px;
+    border-top-left-radius:20px ;
+    border-bottom-left-radius:20px ;
+    border: none;
+    outline: none;
+    font-size: 13px;
+} 
+
+.search-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 40px;
+    width: 45px;
+    border-top-right-radius:20px ;
+    border-bottom-right-radius:20px ;
+    border: none;
+    outline: none;
+}
+  
+.dropdown-login{
+    display: inline-block;
+    align-items: center;
+}
+.dropbtn{ 
+    border: none;
+    font-size: 20px;   
+}
+.dropdown-login a {
+   align-items: center;
+   display: block;
+   text-decoration: none;
+   padding: 5px 10px;
+   color: #565656;
+   font-size: 12px;
+   text-transform: capitalize;
+   line-height: 1.2;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    margin-top: 2px;
+    background-color: hsla(0, 0%, 100%, 0.795);
+    min-width: 100px;
+    box-shadow: 0px 0px 3px black  ;
+}
+.dropdown-login:hover .dropdown-content{
+    display: block;
+} 
+.dropbtn:hover{
+    transform: scale(1.1);
+    color: rgba(219, 60, 2, 0.986);
+}
+
+
+.nav-icon{
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon i {
+    margin-right: 30px;
+    color: #2c2c2c;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all .42s ease;
+}
+
+.nav-icon i:hover{
+    transform: scale(1.1);
+    color: orangered;
+}
+
+#menu-icon{
+    font-size:35px;
+    color: #2c2c2c;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+header.sticky{
+    background-color: #ffeddf;
+    padding: 20px 5%;
+    box-shadow: 0px 0px 10px rgb(0 0 0 /10%);
+}
+
+ /* ================================================Images-slider====================================================== */
+.slideshow-container{
+    padding-top: 115px; 
+    position: relative; 
+    margin: auto; 
+    animation: slider 13s infinite linear;
+}
+.prev,.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 30px;
+    color: rgb(252, 124, 4);
+    font-size:30px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+.next{
+    right: 0;
+}
+
+/* ================================================Product Images========================================================*/
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 2rem;
+}
+.row{
+    position: relative;
+}
+.row img {
+    width: 100%;
+    height: auto;
+    padding: 15px 15px 10px 15px;
+}
+.row img:hover{
+     transform: scale(1.1);
+}
+.product-name h5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+.product-name h5:hover{
+    color: rgb(216, 67, 13);
+}
+
+/* =============================================== Shopping Img ======================================================= */
+.shopping{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+    background-color: rgba(212, 255, 245, 0.699);
+    padding-bottom: 40px;
+}
+.shop-row{
+    position: relative;
+}
+.shop-row img{
+    width: 100%;
+    height: auto;
+    padding:5%;
+}
+.name-1{
+    position: absolute;
+    bottom: 50px;
+    left:111px;
+    color: beige;
+    background-color: rgb(46, 46, 117);
+    padding: 13px 20px 13px 20px;
+    border-radius: 5px;
+    font-size: smaller;
+    font-weight:100;
+}
+.name-1:hover{
+    background-color: rgb(226, 86, 35);
+}
+.name-2{
+    position: absolute;
+    top: 180px;
+    left: 111px;
+    color: beige;
+    background-color: rgb(46, 46, 117);
+    padding: 13px 20px 13px 20px;
+    border-radius: 5px;
+    font-size: smaller;
+    font-weight: 100;
+}
+.name-2:hover{
+    background-color: rgb(226, 86, 35);
+}
+.name-3{
+    position: absolute;
+    bottom: 50px;
+    left:105px;
+    color: beige;
+    background-color: rgb(46, 46, 117);
+    padding: 13px 20px 13px 20px;
+    border-radius: 5px;
+    font-size: smaller;
+    font-weight:100;
+}
+.name-3:hover{
+    background-color: rgb(226, 86, 35);
+}
+.name-4{
+    position: absolute;
+    top: 140px;
+    left: 111px;
+    color: beige;
+    background-color: rgb(46, 46, 117);
+    padding: 13px 20px 13px 20px;
+    border-radius: 5px;
+    font-size: smaller;
+    font-weight: 100;
+}
+.name-4:hover{
+    background-color: rgb(226, 86, 35);
+}
+
+
+/* ========================================================Footer===================================================== */
+
+.contact{
+    background-color:  #ffeddf; 
+}
+.contact-info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+    gap: 2rem;
+    padding: 3%;
+}
+.first-info img{
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+}
+.contact-info h3{
+    color:#212539;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.contact-info p{
+    color: #565656;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1.3;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: all .42s;
+}
+.contact-info p:hover{
+    color:rgb(226, 86, 35);
+}
+.social-icon i{
+    color: #565656;
+    margin-right: 10px;
+    font-size: 20px;
+    transition: all.42s;
+}
+.social-icon i:hover{
+    transform: scale(1.2);
+}
+.second-info{
+    margin-top: 70px;
+}
+.third-info h3{
+    margin-top: 28px;
+}
+.forth-info h3{
+    margin-top: 28px;
+}
+/* ===================================================End-Text========================================================= */
+.end-text{
+    color:#565656;;
+    background-color:white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 12px;
+    font-weight: 400;
+}
+.end-text img{
+    width: 400px;
+}
+
+
+/* =====================================================resposive======================================================= */
+
+@media only screen and (max-width:500px){
+    .prev,.next{
+        font-size: 14 px;
+    }
+}
+
+@media(max-width:890px){
+    header{
+        padding: 20px 3%;
+        transform: .4s;
+    }
+}
+
+@media(max-width:750px){
+    .navmenu{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 130vh;
+        background: #edfff1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 120px 30px;
+        transition: all .42s;
+    }
+    .navmenu a{
+        display: block;
+        margin: 18px 0px;
+    }
+    .navmenu.open{
+        right: 0;
+    }
+    
+}
